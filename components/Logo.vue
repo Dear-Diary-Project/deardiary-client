@@ -23,7 +23,7 @@
 
 <style>
 .NuxtLogo {
-  animation: 1s appear;
+  animation: 2s appear;
   margin: auto;
 }
 
