@@ -1,5 +1,7 @@
 # deardiary-client
 
+![Build and Deploy](https://github.com/Dear-Diary-Project/deardiary-client/workflows/Build%20and%20Deploy/badge.svg?branch=master)
+
 ## Build Setup
 
 ```bash
