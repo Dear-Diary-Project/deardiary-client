@@ -1,27 +1,20 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
+      <Logo class="splash-logo" />
       <h1 class="title">
-        deardiary-client
+        Welcome to Dear Diary
       </h1>
+      <h3 class="subtitle">A place for every memory</h3>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
+        <a target="_blank" href="https://github.com/Dear-Diary-Project">
+          <img class="logo" src="/github.svg" alt="Android Logo" />
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
           target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+          href="https://drive.google.com/file/d/1W1o-CoYSAKfUZZzIISvSYquxtWTMrMwx/view?usp=drivesdk"
+          ><img class="logo" src="/android.svg" alt="Android Logo"
+        /></a>
       </div>
     </div>
   </div>
@@ -63,5 +56,23 @@ export default Vue.extend({})
 
 .links {
   padding-top: 15px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+}
+.splash-logo {
+  max-width: 350px;
+}
+.logo {
+  width: 64px;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .title {
+    font-size: 42px;
+  }
+  .subtitle {
+    font-size: 22px;
+  }
 }
 </style>

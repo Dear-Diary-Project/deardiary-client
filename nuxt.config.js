@@ -14,17 +14,38 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Dear Diary - Come, make memories!',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: 'A place to store your memories',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Dear Diary,Diary, store memories, nuxt, vue, write diary,make memories',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://deardiary.tk/dear-diary-logo.svg',
+      },
+      {
+        hid: 'twitter:card',
+        property: 'twitter:card',
+        content: 'https://deardiary.tk/dear-diary-logo.svg',
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://deardiary.tk/',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/dear-diary-logo.svg' }],
   },
   /*
    ** Global CSS
@@ -43,7 +64,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/google-analytics'],
   /*
    ** Nuxt.js modules
    */
@@ -55,6 +76,7 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Axios module configuration
@@ -71,4 +93,26 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  pwa: {
+    icon: {
+      /* icon options */
+    },
+    meta: {
+      /* meta options */
+      name: 'Dear Diary',
+      description: 'An app for storing your memories',
+    },
+    manifest: {
+      name: 'Dear Diary',
+    },
+  },
+  sitemap: {
+    hostname: 'https://deardiary.tk',
+    gzip: true,
+    routes: ['/'],
+  },
+  googleAnalytics: {
+    // Options
+    id: 'G-NYKQ1RFVTW',
+  },
 }
