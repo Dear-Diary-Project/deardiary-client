@@ -66,4 +66,13 @@ export default Vue.extend({})
 .logo {
   width: 64px;
 }
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .title {
+    font-size: 42px;
+  }
+  .subtitle {
+    font-size: 22px;
+  }
+}
 </style>
