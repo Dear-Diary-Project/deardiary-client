@@ -1,6 +1,9 @@
 <template>
   <div>
-    <Nuxt />
+    <Navbar />
+    <div class="container">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
@@ -16,9 +19,9 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-body {
+/* body {
   background: #fff9e9;
-}
+} */
 *,
 *::before,
 *::after {
@@ -26,7 +29,7 @@ body {
   margin: 0;
 }
 
-.button--green {
+/* .button--green {
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #3b8070;
@@ -53,5 +56,5 @@ body {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
-}
+} */
 </style>
